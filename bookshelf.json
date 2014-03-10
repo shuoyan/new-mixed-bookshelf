@@ -1,0 +1,17 @@
+{
+    "name": "mixed bookshelf",
+    "group": "Apps",
+    "visible": true,
+    "sizes": {
+        "icon": {
+            "frame": "img/icon.png",
+            "width": 100,
+            "height": 100
+        },
+       
+        "full": {
+            "frame": "index.html"
+        }
+    },
+    "default_size": "full"
+}
