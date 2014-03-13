@@ -1,3 +1,7 @@
+Lens.enableArgChecking = function() {
+        enabled = true;
+    };
+
 $(function() {
     $( "#indesigncs3" ).draggable();
   });
