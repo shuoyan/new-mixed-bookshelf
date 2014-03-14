@@ -1,5 +1,3 @@
-Lens.enableArgChecking = function() {
-        enabled = true;
     };
 
 $(function() {
