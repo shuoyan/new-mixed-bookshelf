@@ -1,8 +1,26 @@
     };
+Lens.init(["Components/draggable"], function() {
+    "use strict";
 
-$(function() {
-    $( "#indesigncs3" ).draggable();
-  });
+    var $ = Lens.Libs.jQuery;
+
+    var indesigncs3 = $("#indesigncs3");
+
+    Lens.Components.Draggable(indesigncs3);
+
+    mover[0].addEventListener("lens:touchstart", function(evt) {
+        var touches = evt.targetTouches;
+        
+
+        touches.ended(function() {
+            
+        });
+    });
+});
+
+
+
+
   
 $(function() {
     $( "#citadelspirit" ).draggable();
