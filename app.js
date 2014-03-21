@@ -1,4 +1,22 @@
-    };
+function($,              _,                DOMUtils,
+         Embed) {
+
+    "use strict";
+
+    var enabled = true;
+
+    var touchIndicatorDiv = $("<div class='lens-touch-indicator' />");
+
+    var TouchIndicator = /** @lends Lens.LAF.TouchIndicator */ {
+        /**
+         * Enables scrollbar styling
+         */
+        enable: function() {
+            DOMUtils.addStylesheet("LAF/widgets/touch_indicator.css");
+            enabled = true;
+        }
+        
+
 Lens.init(["Components/draggable"], function() {
     "use strict";
 
@@ -8,7 +26,7 @@ Lens.init(["Components/draggable"], function() {
 
     Lens.Components.Draggable(indesigncs3);
 
-    mover[0].addEventListener("lens:touchstart", function(evt) {
+    indesigncs3[0].addEventListener("lens:touchstart", function(evt) {
         var touches = evt.targetTouches;
         
 
@@ -21,52 +39,4 @@ Lens.init(["Components/draggable"], function() {
 
 
 
-  
-$(function() {
-    $( "#citadelspirit" ).draggable();
-  });
-  
-$(function() {
-    $( "#notsowild" ).draggable();
-  });
-
-$(function() {
-    $( "#thedevotedlife" ).draggable();
-  }); 
-
-$(function() {
-    $( "#slowlooking" ).draggable();
-  });
-
-$(function() {
-    $( "#thebrain" ).draggable();
-  });
-
-$(function() {
-    $( "#girl" ).draggable();
-  });
-
-$(function() {
-    $( "#music" ).draggable();
-  });
-
-$(function() {
-    $( "#choosing" ).draggable();
-  });
-
-$(function() {
-    $( "#nothing" ).draggable();
-  });
-
-$(function() {
-    $( "#persuasion" ).draggable();
-  });
-
-$(function() {
-    $( "#enterprise" ).draggable();
-  });
-
-$(function() {
-    $( "#iainpears" ).draggable();
-  }); 
 
