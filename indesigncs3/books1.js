@@ -1,3 +1,8 @@
+Lens.init(["Components/draggable"], function(){
+
+	"use strict";
+});
+
 var Books = (function() {
 
 	var $books = $( '#bk-list > li > div.bk-book' ), booksCount = $books.length;
