@@ -5,7 +5,7 @@ Lens.init(["Components/draggable"], function() {
 
     var indesigncs3 = $("#indesigncs3");
     var citadelspirit = $("#citadelspirit");
-    var music = $("music");
+    var music = $("#music");
 
     Lens.Components.Draggable(indesigncs3,false);
     Lens.Components.Draggable(citadelspirit,false);

@@ -15,8 +15,8 @@
 .bk-list {
 	list-style: none;
 	position: absolute;
-	top:120px;
-	left:350px;
+	top:100px;
+	left:420px;
 }
 
 .bk-list li {
@@ -36,7 +36,7 @@
 
 .bk-info {
 	position: relative;
-	margin-top: 630px;
+	margin-top: 580px;
 }
 
 .bk-info h3 {
@@ -142,8 +142,8 @@
 	-moz-transform: translate3d(0,0,19px);
 	transform: translate3d(0,0,19px);
 	display: none;
-	width: 450px;
-	height: 570px;
+	width: 401px;
+	height: 508px;
 	top: 5px;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
