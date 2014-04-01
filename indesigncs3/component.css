@@ -62,7 +62,7 @@
 }
 
 .bk-info button {
-	opacity:0.6;
+	opacity:0.4;
 	background: #FC756F;
 	border: none;
 	color: #fff;
@@ -95,16 +95,55 @@
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	-webkit-transition: -webkit-transform 1s;
-	-moz-transition: -moz-transform 1s;
-	transition: transform 1s;
+	-webkit-transition: -webkit-transform 1.5s;
+	-moz-transition: -moz-transform 1.5s;
+	transition: transform 1.5s;
+
 }
 
-.bk-book.bk-bookdefault:hover {
+@keyframes book-rotate {
+    0%   {-webkit-transform: rotate3d(0,1,0,0deg)}
+    25%  {-webkit-transform: rotate3d(0,1,0,10deg)}
+    50%  {-webkit-transform: rotate3d(0,1,0,20deg)}
+    100% {-webkit-transform: rotate3d(0,1,0,35deg)}
+    
+}
+
+@-webkit-keyframes book-rotate {
+    0%   {-webkit-transform: rotate3d(0,1,0,0deg)}
+    25%  {-webkit-transform: rotate3d(0,1,0,10deg)}
+    50%  {-webkit-transform: rotate3d(0,1,0,20deg)}
+    100% {-webkit-transform: rotate3d(0,1,0,35deg)}
+    
+}
+
+.bk-book.bk-bookdefault {
+    animation-name: book-rotate; /**这里引用了前面定义的动画**/
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count:1.5s 6;
+    animation-direction: alternate;
+}
+/****简写****/
+.bk-book.bk-bookdefault {
+    -webkit-animation: book-rotate 1.5s linear 1s 6 alternate;
+    animation: book-rotate 1.5s linear 1s 6 alternate;
+}
+
+/*.bk-book.bk-bookdefault:hover {
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;   
+
+    
+   
+    transform: rotate3d(0,1,0,35deg);
 	-webkit-transform: rotate3d(0,1,0,35deg);
 	-moz-transform: rotate3d(0,1,0,35deg);
 	transform: rotate3d(0,1,0,35deg);
-}
+}*/
 
 .bk-list li .bk-book > div,
 .bk-list li .bk-front > div {
@@ -201,7 +240,7 @@
 }
 
 .bk-list li .bk-left {
-	height: 648px;
+	height: 515px;
 	-webkit-transform: rotate3d(0,1,0,-90deg);
 	-moz-transform: rotate3d(0,1,0,-90deg);
 	transform: rotate3d(0,1,0,-90deg);
