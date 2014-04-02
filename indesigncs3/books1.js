@@ -1,3 +1,8 @@
+Lens.init(["LAF"], function() {
+    "use strict";
+
+});
+
 Lens.init(["Components/draggable"], function(){
 
 	"use strict";
