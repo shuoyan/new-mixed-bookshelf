@@ -1,6 +1,17 @@
 Lens.init(["LAF"], function() {
     "use strict";
 
+    
+    disable: function() {
+            DOMUtils.removeStylesheet("LAF/widgets/buttons.css");
+            enabled = false;
+        });
+    
+    enable: function() {
+            enabled = true;
+            gestureSearch(enabled);
+        });
+
 });
 
 Lens.init(["Components/draggable"], function(){

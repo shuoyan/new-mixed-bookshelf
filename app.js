@@ -1,3 +1,12 @@
+Lens.init(["LAF"], function() {
+    "use strict";
+
+     disable: function() {
+            DOMUtils.removeStylesheet("LAF/widgets/buttons.css");
+            enabled = false;
+        });
+});
+
 Lens.init(["Components/draggable"], function() {
     "use strict";
 
