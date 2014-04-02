@@ -13,18 +13,21 @@ Lens.init(["Components/draggable"], function() {
 
     indesigncs3[0].addEventListener("lens:touchstart", function(evt) {
         var touches = evt.targetTouches;
+        axis: 'x'；
         touches.ended(function() {    
         });
     });
 
     citadelspirit[0].addEventListener("lens:touchstart", function(evt) {
         var touches = evt.targetTouches;
+        axis: 'x'；
         touches.ended(function() {    
         });
     });
 
     music[0].addEventListener("lens:touchstart", function(evt) {
         var touches = evt.targetTouches;
+        axis: 'x'；
         touches.ended(function() {    
         });
     });
