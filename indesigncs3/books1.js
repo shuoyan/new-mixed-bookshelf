@@ -106,3 +106,46 @@ var Books = (function() {
 	return { init : init };
 
 })();
+
+Lens.autorun(function(){
+            Grid.updateTv();
+            books1.updateShares();
+        });
+
+
+updateShares: function(){
+        var newShare = DB.Shares.findOne({user: books1.name, views: 0});
+        if(newShare){
+            var previouslyShared = DB.Shares.findOne({session:newShare.session, user:Grid.name, views: 1});
+            if(previouslyShared){
+                 DB.Shares.remove(newShare._id);
+            }else{
+                 DB.Shares.update({_id:newShare._id},{
+                    $set:{
+                        views: 1,
+                    }
+                 });
+            }
+            Lens.Components.Modal.buttons({
+                text: newShare.owner + " wants to share a new session with you:",
+                buttons:[
+                    {
+                        text: "Open",
+                        class: "white-button",
+                        callback: function(){
+                            var user = DB.Users.findOne({name:Grid.name});
+                            DB.Users.update({_id:user._id}, {$set:{state:"session"}});
+                            Grid.loadGrid(newShare.session);
+
+                        }
+                    },
+                    {
+                        text: "Not now",
+                        class: "white-button",
+                        callback: function(){
+                        }
+                    }
+                ]
+            })
+        }
+    },

@@ -184,15 +184,4 @@
     box-shadow: 5px 3px 3px 1px rgb(79,79,79);
 }
 
-#tellme img{
 
-    position:absolute;
-    left:710px;
-    top:210px;
-
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -moz-box-shadow: 3px 3px 3px 1px rgb(79,79,79);
-    -webkit-box-shadow: 3px 3px 3px 1px rgb(79,79,79);
-    box-shadow: 3px 3px 3px 1px rgb(79,79,79);
-}
