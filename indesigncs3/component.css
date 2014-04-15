@@ -13,6 +13,7 @@
 }
 
 .bk-list {
+
 	list-style: none;
 	position: absolute;
 	top:100px;
@@ -144,6 +145,8 @@
 	-moz-transform: rotate3d(0,1,0,35deg);
 	transform: rotate3d(0,1,0,35deg);
 }*/
+
+
 
 .bk-list li .bk-book > div,
 .bk-list li .bk-front > div {
@@ -455,3 +458,5 @@
 	text-align: center;
 	font-weight: 700;
 }
+
+
